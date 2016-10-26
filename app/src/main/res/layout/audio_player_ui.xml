@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@null">
+
+    <LinearLayout
+        android:id="@+id/play_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:background="@null">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/song_list"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:divider="@null"
+                android:cacheColorHint="#00000000"
+                android:listSelector="@drawable/chat_listitem" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <SeekBar
+                android:id="@+id/timeline"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:maxHeight="4.0dip"
+                android:minHeight="4.0dip"
+                android:paddingLeft="16.0dip"
+                android:secondaryProgress="50"
+                android:progress="20"
+                android:paddingRight="16.0dip"
+                android:progressDrawable="@drawable/po_seekbar"
+                android:thumb="@drawable/seekbar_thumb" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/cur_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:textSize="10dp"
+                android:textColor="#ffffff"
+                android:text="00:00"/>
+            <TextView
+                android:id="@+id/total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="12dp"
+                android:textSize="10dp"
+                android:textColor="#ffffff"
+                android:text="00:00"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="19dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/play_mode"
+                android:layout_width="28dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="23dp"
+                android:visibility="visible"
+                android:scaleType="fitCenter"
+               />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/play_prev"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play_prev_selector"/>
+            <CheckBox
+                android:id="@+id/play"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:button="@null"
+                android:checked="true"
+                android:background="@drawable/play_audio_state"/>
+            <ImageView
+                android:id="@+id/play_next"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play_next_selector"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/push_to_toy"
+                android:layout_width="24dp"
+                android:layout_height="21dp"
+                android:layout_marginRight="23dp"
+                android:background="@null"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
